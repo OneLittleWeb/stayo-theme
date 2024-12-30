@@ -1,0 +1,54 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:700,var(--text-xl-regular-font-weight),500,400,var(--body-test-font-weight)|DM+Sans:500,400|Roboto:700,400");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+@font-face {
+  font-family: "Satoshi-Black";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/643cb44a04966504b3e272b3/fonts/satoshi-black.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "Inter Display-SemiBold";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/671ac5d31f9118a61966bf0f/fonts/interdisplay-semibold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/62fe21e7f2f27787f05ba142/fonts/satoshi-variable.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Futura-Bold-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/62494169fb257b1c34729f24/fonts/futura-bold-font.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Futura Bk BT-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/62494169fb257b1c34729f24/fonts/futur.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/63d2c7e0303c5178f866c8eb/fonts/satoshi-regular.otf")
+    format("opentype");
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel with Tub</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        .bg-opacity-41 {
+            background-color: rgba(0, 0, 0, 0.41);
+        }
+    </style>
+</head>
+<body>
+    <nav class="bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <span class="text-xl font-bold">HOTEL<span class="text-blue-600">WITH</span>TUB</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <!-- Hotels with hot tub Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            Hotels with hot tub
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute z-10 hidden group-hover:block w-48 rounded-md shadow-lg py-1 bg-white">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Option 1</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Option 2</a>
+                        </div>
+                    </div>
+
+                    <!-- Cabin with hot tub Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            Cabin with hot tub
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute z-10 hidden group-hover:block w-48 rounded-md shadow-lg py-1 bg-white">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Option 1</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Option 2</a>
+                        </div>
+                    </div>
+
+                    <!-- More Hotel Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            More Hotel
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute z-10 hidden group-hover:block w-48 rounded-md shadow-lg py-1 bg-white">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Option 1</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Option 2</a>
+                        </div>
+                    </div>
+
+                    <!-- Regular Menu Items -->
+                    <a href="#" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Map</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <svg id="menu-icon" class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <div class="space-y-1">
+                        <button onclick="toggleSubmenu('hotels-submenu')" class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 flex justify-between items-center">
+                            Hotels with hot tub
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="hotels-submenu" class="hidden pl-4">
+                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50">Option 1</a>
+                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50">Option 2</a>
+                        </div>
+                    </div>
+
+                    <div class="space-y-1">
+                        <button onclick="toggleSubmenu('cabins-submenu')" class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 flex justify-between items-center">
+                            Cabin with hot tub
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="cabins-submenu" class="hidden pl-4">
+                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50">Option 1</a>
+                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50">Option 2</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Map</a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Blog</a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+    <div class="relative mx-40">
+        <!-- Hero Container with Background Image -->
+        <div class="relative h-[95vh] w-full rounded-3xl overflow-hidden">
+            <!-- Background Image -->
+            <img 
+                src="https://d187iavj3alr0u.cloudfront.net/assets/home-hero-bg.jpg"
+                alt="Luxury bathroom with jacuzzi" 
+                class="w-full h-full object-cover"
+            />
+            
+            <!-- Content Container -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <!-- Text and Search Container with nav-matching width -->
+                <div class="max-w-7xl mx-auto w-full px-4">
+                    <div class="bg-opacity-41 px-8 py-12 rounded-2xl">
+                        <!-- Text Content -->
+                        <h1 class="text-4xl md:text-5xl text-white font-bold text-center mb-4">
+                            Hotels With Jacuzzi in Room & Private Hot Tub Suites
+                        </h1>
+                        <p class="text-lg text-white text-center mb-8">
+                            Discover hotels with Jacuzzi® in room anywhere in the United States
+                        </p>
+                        
+                        <!-- Search Bar -->
+                        <div class="max-w-xl mx-auto">
+                            <div class="relative flex">
+                                <!-- Search Input -->
+                                <input 
+                                    type="text" 
+                                    placeholder="Search by city/location" 
+                                    class="w-full px-12 py-4 rounded-l-full border-0 focus:ring-2 focus:ring-blue-500 outline-none text-gray-700"
+                                />
+                                <!-- Search Icon -->
+                                <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Search Button -->
+                                <button class="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-r-full transition-colors duration-200">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section>
+        <div class="mx-8 my-16">
+            <div class="max-w-7xl mx-auto">
+                <!-- Testimonials Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-[#1C1C1C] rounded-3xl p-8 flex flex-col justify-between">
+                        <!-- Testimonial Content -->
+                        <p class="text-white text-lg mb-8">
+                            Our rebranding has completely revitalized our business. We're now recognized as a leader in our industry.
+                        </p>
+                        <!-- Author Info -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img 
+                                    src="https://d187iavj3alr0u.cloudfront.net/assets/home-ceo-image.png" 
+                                    alt="Jewson Lee" 
+                                    class="w-10 h-10 rounded-full"
+                                />
+                                <div>
+                                    <h3 class="text-white font-medium">Jewson Lee</h3>
+                                    <p class="text-gray-400 text-sm">CEO of Innovate Tech</p>
+                                </div>
+                            </div>
+                            <!-- Company Logo -->
+                            <img 
+                                src="https://d187iavj3alr0u.cloudfront.net/assets/home-company-logo.png" 
+                                alt="Command+R" 
+                                class="h-6 w-auto"
+                            />
+                        </div>
+                    </div>
+    
+                    <!-- Testimonial 2 -->
+                    <div class="bg-[#1C1C1C] rounded-3xl p-8 flex flex-col justify-between">
+                        <!-- Testimonial Content -->
+                        <p class="text-white text-lg mb-8">
+                            The team took our vision and turned it into a powerful brand that speaks to our core values.
+                        </p>
+                        <!-- Author Info -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img 
+                                    src="https://d187iavj3alr0u.cloudfront.net/assets/home-ceo-image.png" 
+                                    alt="Mark Thompson" 
+                                    class="w-10 h-10 rounded-full"
+                                />
+                                <div>
+                                    <h3 class="text-white font-medium">Mark Thompson</h3>
+                                    <p class="text-gray-400 text-sm">Founder of Green Earth Products</p>
+                                </div>
+                            </div>
+                            <!-- Company Logo -->
+                            <img 
+                                src="https://d187iavj3alr0u.cloudfront.net/assets/home-company-logo.png" 
+                                alt="Epicurious" 
+                                class="h-6 w-auto"
+                            />
+                        </div>
+                    </div>
+    
+                    <!-- Testimonial 3 -->
+                    <div class="bg-[#1C1C1C] rounded-3xl p-8 flex flex-col justify-between">
+                        <!-- Testimonial Content -->
+                        <p class="text-white text-lg mb-8">
+                            Working with this team was a game-changer. Our brand now truly reflects who we are.
+                        </p>
+                        <!-- Author Info -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img 
+                                    src="https://d187iavj3alr0u.cloudfront.net/assets/home-ceo-image.png" 
+                                    alt="Sara Davis" 
+                                    class="w-10 h-10 rounded-full"
+                                />
+                                <div>
+                                    <h3 class="text-white font-medium">Sara Davis</h3>
+                                    <p class="text-gray-400 text-sm">Marketing Director at Urban Life</p>
+                                </div>
+                            </div>
+                            <!-- Company Logo -->
+                            <img 
+                                src="https://d187iavj3alr0u.cloudfront.net/assets/home-company-logo.png" 
+                                alt="GlobalBank" 
+                                class="h-6 w-auto"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            submenu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
