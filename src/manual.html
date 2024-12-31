@@ -5,16 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel with Tub</title>
     <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide.min.css">
     <style>
         .bg-opacity-41 {
             background-color: rgba(0, 0, 0, 0.41);
         }
+        .splide__pagination__page.is-active {
+            background: #111827 !important;
+            transform: scale(1) !important;
+        }
+        .splide__pagination{
+            bottom: -3rem;
+        }
+        .splide__pagination__page {
+            background: #D1D5DB !important;
+        }
+        .splide__arrow {
+            background: rgba(255, 255, 255, 0.9) !important;
+        }
+        .splide__arrow:hover {
+            background: rgba(255, 255, 255, 1) !important;
+        }
+        
     </style>
 </head>
 <body>
+    <!-- NAV Section -->
     <nav class="bg-white">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-24">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="/" class="flex items-center">
@@ -118,59 +137,65 @@
             </div>
         </div>
     </nav>
+    <div data-layer="Ellipse 1587" class="Ellipse1587" style="width: 487px; height: 487px; left: -28px; top: 1098px; position: absolute; background: rgba(252, 129, 82, 0.12);  border-radius: 9999px; filter: blur(199.50px)"></div>
+    <div data-layer="Ellipse 1587" class="Ellipse1587" style="width: 445px; height: 445px; left: 79px; top: 3145px; position: absolute; background: rgba(252, 129, 82, 0.25); border-radius: 9999px; filter: blur(199.50px)"></div>
+    <div data-layer="Ellipse 1589" class="Ellipse1589" style="width: 445px; height: 445px; left: 1211px; top: 3884px; position: absolute; background: rgba(252, 129, 82, 0.25); border-radius: 9999px; filter: blur(199.50px)"></div>
+    <div data-layer="Ellipse 1588" class="Ellipse1588" style="width: 547px; height: 547px; left: 1102px; top: 2072px; position: absolute; background: rgba(252, 129, 82, 0.25); border-radius: 9999px; filter: blur(199.50px)"></div>
 
+    <!-- Hero Section -->
     <section>
-    <div class="relative mx-40">
-        <!-- Hero Container with Background Image -->
-        <div class="relative h-[95vh] w-full rounded-3xl overflow-hidden">
-            <!-- Background Image -->
-            <img 
-                src="https://d187iavj3alr0u.cloudfront.net/assets/home-hero-bg.jpg"
-                alt="Luxury bathroom with jacuzzi" 
-                class="w-full h-full object-cover"
-            />
-            
-            <!-- Content Container -->
-            <div class="absolute inset-0 flex flex-col items-center justify-center">
-                <!-- Text and Search Container with nav-matching width -->
-                <div class="max-w-7xl mx-auto w-full px-4">
-                    <div class="bg-opacity-41 px-8 py-12 rounded-2xl">
-                        <!-- Text Content -->
-                        <h1 class="text-4xl md:text-5xl text-white font-bold text-center mb-4">
-                            Hotels With Jacuzzi in Room & Private Hot Tub Suites
-                        </h1>
-                        <p class="text-lg text-white text-center mb-8">
-                            Discover hotels with Jacuzzi® in room anywhere in the United States
-                        </p>
-                        
-                        <!-- Search Bar -->
-                        <div class="max-w-xl mx-auto">
-                            <div class="relative flex">
-                                <!-- Search Input -->
-                                <input 
-                                    type="text" 
-                                    placeholder="Search by city/location" 
-                                    class="w-full px-12 py-4 rounded-l-full border-0 focus:ring-2 focus:ring-blue-500 outline-none text-gray-700"
-                                />
-                                <!-- Search Icon -->
-                                <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
-                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                    </svg>
+        <div class="relative mx-4 sm:mx-8 md:mx-16 lg:mx-40">
+            <!-- Hero Container with Background Image -->
+            <div class="relative h-[80vh] sm:h-[85vh] md:h-[90vh] lg:h-[95vh] w-full rounded-2xl sm:rounded-3xl overflow-hidden">
+                <!-- Background Image -->
+                <img 
+                    src="https://d187iavj3alr0u.cloudfront.net/assets/home-hero-bg.jpg"
+                    alt="Luxury bathroom with jacuzzi" 
+                    class="w-full h-full object-cover"
+                />
+                
+                <!-- Content Container -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                    <!-- Text and Search Container with nav-matching width -->
+                    <div class="max-w-7xl mx-auto w-full px-4">
+                        <div class="bg-opacity-41 px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 rounded-xl sm:rounded-2xl">
+                            <!-- Text Content -->
+                            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold text-center mb-3 sm:mb-4">
+                                Hotels With Jacuzzi in Room & Private Hot Tub Suites
+                            </h1>
+                            <p class="text-base sm:text-lg text-white text-center mb-6 sm:mb-8">
+                                Discover hotels with Jacuzzi® in room anywhere in the United States
+                            </p>
+                            
+                            <!-- Search Bar -->
+                            <div class="max-w-xl mx-auto">
+                                <div class="relative flex flex-col sm:flex-row gap-2 sm:gap-0">
+                                    <!-- Search Input -->
+                                    <input 
+                                        type="text" 
+                                        placeholder="Search by city/location" 
+                                        class="w-full px-12 py-3 sm:py-4 rounded-full sm:rounded-l-full sm:rounded-r-none border-0 focus:ring-2 focus:ring-blue-500 outline-none text-gray-700 text-sm sm:text-base"
+                                    />
+                                    <!-- Search Icon -->
+                                    <div class="absolute left-4 top-3 sm:top-1/2 transform sm:-translate-y-1/2">
+                                        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                        </svg>
+                                    </div>
+                                    
+                                    <!-- Search Button -->
+                                    <button class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-full sm:rounded-l-none sm:rounded-r-full transition-colors duration-200 text-sm sm:text-base">
+                                        Search
+                                    </button>
                                 </div>
-                                
-                                <!-- Search Button -->
-                                <button class="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-r-full transition-colors duration-200">
-                                    Search
-                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
+    <!-- Testimonial Section -->
     <section>
         <div class="mx-8 my-16">
             <div class="max-w-7xl mx-auto">
@@ -263,6 +288,7 @@
             </div>
         </div>
     </section>
+    <!-- Paragraph Section -->
     <section> 
         <div class="mx-8 my-16">
             <div class="max-w-7xl mx-auto">
@@ -277,75 +303,223 @@
             </div>
         </div>
     </section>
+     <!-- Popular Cities Slider Section -->
+     <section> 
+        <div class="w-ful py-16">
+            <div class="mx-auto">
+                <h2 class="text-center text-3xl md:text-4xl font-bold mb-12">
+                    Most popular cities with Jacuzzi in-room hotels
+                </h2>
+    
+                <div class="splide" role="group" aria-label="Popular Cities">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <!-- New York -->
+                            <li class="splide__slide px-2">
+                                <a href="#" class="block cursor-pointer">
+                                    <div class="relative rounded-3xl overflow-hidden !aspect-square transition duration-300 ease-in-out hover:shadow-xl">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1448317846460-907988886b33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wAWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                            alt="Chicago" 
+                                            class="w-full h-full object-cover transition-all duration-300 ease-in-out hover:scale-105"
+                                        />
+                                        <div class="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-md py-4 transition duration-300 group-hover:bg-black/40">
+                                            <h3 class="text-white text-xl font-medium text-center">Chicago</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+    
+                            <!-- Dallas -->
+                            <li class="splide__slide px-2">
+                                <a href="#" class="block cursor-pointer">
+                                    <div class="relative rounded-3xl overflow-hidden !aspect-square transition duration-300 ease-in-out hover:shadow-xl">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1448317846460-907988886b33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wAWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                            alt="Chicago" 
+                                            class="w-full h-full object-cover transition-all duration-300 ease-in-out hover:scale-105"
+                                        />
+                                        <div class="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-md py-4 transition duration-300 group-hover:bg-black/40">
+                                            <h3 class="text-white text-xl font-medium text-center">Chicago</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+    
+                            <!-- Las Vegas -->
+                            <li class="splide__slide px-2">
+                                <a href="#" class="block cursor-pointer">
+                                    <div class="relative rounded-3xl overflow-hidden !aspect-square transition duration-300 ease-in-out hover:shadow-xl">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1448317846460-907988886b33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wAWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                            alt="Chicago" 
+                                            class="w-full h-full object-cover transition-all duration-300 ease-in-out hover:scale-105"
+                                        />
+                                        <div class="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-md py-4 transition duration-300 group-hover:bg-black/40">
+                                            <h3 class="text-white text-xl font-medium text-center">Chicago</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+    
+                            <!-- Baltimore -->
+                            <li class="splide__slide px-2">
+                                <a href="#" class="block cursor-pointer">
+                                    <div class="relative rounded-3xl overflow-hidden !aspect-square transition duration-300 ease-in-out hover:shadow-xl">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1448317846460-907988886b33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wAWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                            alt="Chicago" 
+                                            class="w-full h-full object-cover transition-all duration-300 ease-in-out hover:scale-105"
+                                        />
+                                        <div class="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-md py-4 transition duration-300 group-hover:bg-black/40">
+                                            <h3 class="text-white text-xl font-medium text-center">Chicago</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+    
+                            <!-- Chicago -->
+                            <li class="splide__slide px-2">
+                                <a href="#" class="block cursor-pointer">
+                                    <div class="relative rounded-3xl overflow-hidden !aspect-square transition duration-300 ease-in-out hover:shadow-xl">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1448317846460-907988886b33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wAWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                            alt="Chicago" 
+                                            class="w-full h-full object-cover transition-all duration-300 ease-in-out hover:scale-105"
+                                        />
+                                        <div class="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-md py-4 transition duration-300 group-hover:bg-black/40">
+                                            <h3 class="text-white text-xl font-medium text-center">Chicago</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+    
+                            <!-- San Diego -->
+                            <li class="splide__slide px-2">
+                                <a href="#" class="block cursor-pointer">
+                                    <div class="relative rounded-3xl overflow-hidden !aspect-square transition duration-300 ease-in-out hover:shadow-xl">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1448317846460-907988886b33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wAWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                            alt="Chicago" 
+                                            class="w-full h-full object-cover transition-all duration-300 ease-in-out hover:scale-105"
+                                        />
+                                        <div class="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-md py-4 transition duration-300 group-hover:bg-black/40">
+                                            <h3 class="text-white text-xl font-medium text-center">Chicago</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section>
         <div class="mx-8 my-16">
             <div class="max-w-7xl mx-auto">
                 <!-- Header Section -->
                 <div class="text-center mb-12">
-                    <p class="text-gray-600 mb-2 text-sm md:text-base uppercase tracking-wide">
+                    <p class="text-gray-600 mb-2 text-sm md:text-base uppercase tracking-wide font-medium">
                         ALL USA STATES WITH
                     </p>
-                    <h2 class="text-3xl md:text-4xl lg:text-[40px] font-bold mb-4">
+                    <h2 class="text-3xl md:text-4xl lg:text-[40px] font-bold mb-4 text-gray-900">
                         Jacuzzi suites in 2024
                     </h2>
-                    <p class="text-gray-600 text-base md:text-lg max-w-3xl mx-auto">
+                    <p class="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
                         Our website makes it easy to find hotels with Jacuzzi in room anywhere in the USA.
                     </p>
                 </div>
     
                 <!-- West Coast Section -->
                 <div class="mt-16">
-                    <h3 class="text-2xl md:text-3xl font-bold text-center mb-8">
+                    <h3 class="text-2xl md:text-3xl font-bold text-center mb-10 text-gray-900">
                         West Coast
                     </h3>
                     
-                    <!-- States Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- States Grid - Now 4 columns on large screens -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         <!-- Alaska Card -->
                         <div class="group">
                             <a href="#alaska" class="block">
-                                <div class="relative rounded-3xl overflow-hidden">
-                                    <img 
-                                        src="https://d187iavj3alr0u.cloudfront.net/assets/northern+light.png" 
-                                        alt="Northern Lights in Alaska" 
-                                        class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
-                                    />
+                                <div class="relative rounded-3xl overflow-hidden shadow-md transition-all duration-300 ease-in-out group-hover:shadow-lg">
+                                    <div class="aspect-[4/3] relative">
+                                        <img 
+                                            src="https://plus.unsplash.com/premium_photo-1661954654458-c673671d4a08?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                            alt="Northern Lights in Alaska" 
+                                            class="absolute inset-0 w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                                        />
+                                        <div class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-10"></div>
+                                    </div>
                                 </div>
-                                <p class="mt-4 text-lg text-gray-900 text-center underline">
-                                    Alaska
-                                </p>
+                                <div class="mt-5 text-center">
+                                    <h4 class="text-lg font-medium text-gray-900 transition-colors duration-300 group-hover:text-blue-600">
+                                        Alaska
+                                    </h4>
+                                </div>
                             </a>
                         </div>
     
                         <!-- Oregon Card -->
                         <div class="group">
                             <a href="#oregon" class="block">
-                                <div class="relative rounded-3xl overflow-hidden">
-                                    <img 
-                                        src="https://d187iavj3alr0u.cloudfront.net/assets/northern+light.png" 
-                                        alt="Oregon Coast" 
-                                        class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
-                                    />
+                                <div class="relative rounded-3xl overflow-hidden shadow-md transition-all duration-300 ease-in-out group-hover:shadow-lg">
+                                    <div class="aspect-[4/3] relative">
+                                        <img 
+                                            src="https://plus.unsplash.com/premium_photo-1661954654458-c673671d4a08?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                            alt="Oregon Coast" 
+                                            class="absolute inset-0 w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                                        />
+                                        <div class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-10"></div>
+                                    </div>
                                 </div>
-                                <p class="mt-4 text-lg text-gray-900 text-center underline">
-                                    Oregon
-                                </p>
+                                <div class="mt-5 text-center">
+                                    <h4 class="text-lg font-medium text-gray-900 transition-colors duration-300 group-hover:text-blue-600">
+                                        Oregon
+                                    </h4>
+                                </div>
                             </a>
                         </div>
     
                         <!-- California Card -->
                         <div class="group">
                             <a href="#california" class="block">
-                                <div class="relative rounded-3xl overflow-hidden">
-                                    <img 
-                                        src="https://d187iavj3alr0u.cloudfront.net/assets/northern+light.png" 
-                                        alt="Golden Gate Bridge in California" 
-                                        class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
-                                    />
+                                <div class="relative rounded-3xl overflow-hidden shadow-md transition-all duration-300 ease-in-out group-hover:shadow-lg">
+                                    <div class="aspect-[4/3] relative">
+                                        <img 
+                                            src="https://plus.unsplash.com/premium_photo-1661954654458-c673671d4a08?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                            alt="Golden Gate Bridge in California" 
+                                            class="absolute inset-0 w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                                        />
+                                        <div class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-10"></div>
+                                    </div>
                                 </div>
-                                <p class="mt-4 text-lg text-gray-900 text-center underline">
-                                    California
-                                </p>
+                                <div class="mt-5 text-center">
+                                    <h4 class="text-lg font-medium text-gray-900 transition-colors duration-300 group-hover:text-blue-600">
+                                        California
+                                    </h4>
+                                </div>
+                            </a>
+                        </div>
+    
+                        <!-- Washington Card -->
+                        <div class="group">
+                            <a href="#washington" class="block">
+                                <div class="relative rounded-3xl overflow-hidden shadow-md transition-all duration-300 ease-in-out group-hover:shadow-lg">
+                                    <div class="aspect-[4/3] relative">
+                                        <img 
+                                            src="https://plus.unsplash.com/premium_photo-1661954654458-c673671d4a08?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                            alt="Washington State" 
+                                            class="absolute inset-0 w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                                        />
+                                        <div class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-10"></div>
+                                    </div>
+                                </div>
+                                <div class="mt-5 text-center">
+                                    <h4 class="text-lg font-medium text-gray-900 transition-colors duration-300 group-hover:text-blue-600">
+                                        Washington
+                                    </h4>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -353,6 +527,7 @@
             </div>
         </div>
     </section>
+    <!-- FAQ Section -->
     <section>
         <div class="mx-8 my-16">
             <div class="max-w-7xl mx-auto">
@@ -440,6 +615,7 @@
             </div>
         </div>
     </section>
+    <!-- Articles Section -->
     <section>
         <div class="mx-8 my-16">
             <div class="max-w-7xl mx-auto">
@@ -563,11 +739,12 @@
             </div>
         </div>
     </section>
+    <!-- Footer Section -->
     <footer class="bg-gray-50">
         <!-- Main Footer Content -->
         <div class="py-16">
-            <div class="max-w-7xl mx-auto px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 sm:gap-6 lg:gap-12">
                     <!-- West Coast & Southwest & Rocky Mountains -->
                     <div class="space-y-8">
                         <div>
@@ -639,27 +816,27 @@
                         </ul>
                     </div>
 
-                    <!-- Southeast & Newsletter -->
-                    <div class="space-y-12">
-                        <div>
-                            <h3 class="text-gray-900 font-semibold mb-4">Southeast</h3>
-                            <ul class="space-y-3">
-                                <li><a href="#" class="text-gray-600 hover:text-gray-900">Alabama</a></li>
-                                <li><a href="#" class="text-gray-600 hover:text-gray-900">Arkansas</a></li>
-                                <li><a href="#" class="text-gray-600 hover:text-gray-900">Florida</a></li>
-                                <li><a href="#" class="text-gray-600 hover:text-gray-900">Georgia</a></li>
-                                <li><a href="#" class="text-gray-600 hover:text-gray-900">Kentucky</a></li>
-                                <li><a href="#" class="text-gray-600 hover:text-gray-900">Louisiana</a></li>
-                                <li><a href="#" class="text-gray-600 hover:text-gray-900">Mississippi</a></li>
-                                <li><a href="#" class="text-gray-600 hover:text-gray-900">North Carolina</a></li>
-                                <li><a href="#" class="text-gray-600 hover:text-gray-900">South Carolina</a></li>
-                                <li><a href="#" class="text-gray-600 hover:text-gray-900">Tennessee</a></li>
-                            </ul>
-                        </div>
+                    <!-- Southeast -->
+                    <div>
+                        <h3 class="text-gray-900 font-semibold mb-4">Southeast</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-gray-600 hover:text-gray-900">Alabama</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-gray-900">Arkansas</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-gray-900">Florida</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-gray-900">Georgia</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-gray-900">Kentucky</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-gray-900">Louisiana</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-gray-900">Mississippi</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-gray-900">North Carolina</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-gray-900">South Carolina</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-gray-900">Tennessee</a></li>
+                        </ul>
+                    </div>
 
-                        <!-- Newsletter -->
-                        <div>
-                            <h3 class="text-gray-900 font-semibold mb-4">News letter</h3>
+                    <!-- Newsletter Section -->
+                    <div class="col-span-2 lg:col-span-4 mt-8">
+                        <div class="max-w-md mx-auto">
+                            <h3 class="text-gray-900 font-semibold mb-4 text-center">News letter</h3>
                             <form class="flex gap-2">
                                 <input 
                                     type="email" 
@@ -680,7 +857,7 @@
 
         <!-- Bottom Footer -->
         <div class="border-t border-gray-200">
-            <div class="max-w-7xl mx-auto px-8 py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                     <!-- Copyright -->
                     <div class="text-gray-500 text-sm">
@@ -751,6 +928,45 @@
             content.classList.toggle('active');
             arrow.classList.toggle('rotate-180');
         }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
+    <script>
+        new Splide('.splide', {
+        type: 'loop',
+        perPage: 4,
+        perMove: 1,
+        gap: '1rem',
+        padding: { left: '10%', right: '10%' }, // This shows partial slides on edges
+        pagination: true,
+        arrows: true,
+        autoplay: true,
+        interval: 4000,
+        speed: 800,
+        focus: 'center', // Centers the active slide
+        trimSpace: false, // Prevents trimming of empty space
+        breakpoints: {
+            1536: {
+                perPage: 4,
+                padding: { left: '8%', right: '8%' }
+            },
+            1280: {
+                perPage: 3,
+                padding: { left: '7%', right: '7%' }
+            },
+            1024: {
+                perPage: 2,
+                padding: { left: '5%', right: '5%' }
+            },
+            768: {
+                perPage: 2,
+                padding: { left: '3%', right: '3%' }
+            },
+            640: {
+                perPage: 1,
+                padding: { left: '15%', right: '15%' }
+            }
+        }
+    }).mount();
     </script>
 </body>
 </html>
